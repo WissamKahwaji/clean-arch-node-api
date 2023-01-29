@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/WissamKahwaji/clean-arch-node-api/issues"
   },
-  "homepage": "https://github.com/WissamKahwaji/clean-arch-node-api#readme"
+  "homepage": "https://github.com/WissamKahwaji/clean-arch-node-api#readme",
+  "dependencies": {
+    "standard": "^17.0.0"
+  }
 }
