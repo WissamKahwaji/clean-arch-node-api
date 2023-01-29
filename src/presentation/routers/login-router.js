@@ -16,5 +16,6 @@ module.exports = class LoginRouter {
       return httpResponse.badRequest('password')
     }
     this.authUseCaseSpy.auth(email, password)
+    return httpResponse.unAuthorizedError()
   }
 }
