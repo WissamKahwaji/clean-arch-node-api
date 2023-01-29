@@ -1,7 +1,7 @@
 class LoginRouter {
   route (httpRequest) {
     if (!httpRequest || !httpRequest.body) {
-      return httpResponse.serverError
+      return httpResponse.serverError()
     }
     const { email, password } = httpRequest.body
     if (!email) {
