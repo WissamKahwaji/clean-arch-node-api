@@ -4,7 +4,7 @@ module.exports = class LoginRouter {
     this.authUseCaseSpy = authUseCaseSpy
   }
 
-  route (httpRequest) {
+  async route (httpRequest) {
     try {
       const { email, password } = httpRequest.body
       if (!email) {
@@ -13,7 +13,7 @@ module.exports = class LoginRouter {
       if (!password) {
         return httpResponse.badRequest('password')
       }
-      const accessToken = this.authUseCaseSpy.auth(email, password)
+      const accessToken = await this.authUseCaseSpy.auth(email, password)
       if (!accessToken) {
         return httpResponse.unAuthorizedError()
       }
