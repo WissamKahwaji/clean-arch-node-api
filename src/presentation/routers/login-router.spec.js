@@ -1,8 +1,6 @@
 const LoginRouter = require('./login-router')
-const MissingParamError = require('../helpers/missing-param-error')
-const UnAuthorizedError = require('../helpers/unauthorized-error')
-const ServerError = require('../helpers/server-error')
-const InvalidParamError = require('../helpers/invalid-param-error')
+const { MissingParamError, InvalidParamError, ServerError, UnAuthorizedError } = require('../errors')
+
 const makeSut = () => {
   const authUseCaseSpy = makeAuthUseCase()
   const emailValidatorSpy = makeEmailValidator()
